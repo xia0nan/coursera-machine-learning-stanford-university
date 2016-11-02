@@ -16,8 +16,17 @@ for iter = 1:num_iters
     % Hint: While debugging, it can be useful to print out the values
     %       of the cost function (computeCost) and gradient here.
     %
-
-
+    
+    % Print out current cost
+    current_cost = computeCost(X, y, theta);
+    fprintf('Current Cost: %f\n', current_cost);
+    
+    % Update theta
+%     temp1 = theta(1) - alpha / m * sum((X * theta - y));
+%     temp2 = theta(2) - alpha / m * sum((X * theta - y).*X(:, 2));
+%     theta = [temp1;temp2];
+    h = X * theta;
+    theta = theta - alpha / m * (X' * (h - y));
 
 
 
