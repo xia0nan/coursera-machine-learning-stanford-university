@@ -30,7 +30,7 @@ mu = mean(X);
 sigma = std(X);
 
 
-X_norm = studentize(X);
+X_norm = (X-mu)./sigma;
 %for i=1:size(X,2)
 %X_norm(:,i) = X(:,i)-mu(i);
 %X_norm(:,i) = X_norm(:,i)./sigma(i);
