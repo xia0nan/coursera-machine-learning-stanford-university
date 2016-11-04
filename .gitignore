@@ -36,4 +36,4 @@ out
 gen
 .gitignore
 .idea/
-machine-learning-ex1/ex1/token.mat
+token.mat
