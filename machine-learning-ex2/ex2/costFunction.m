@@ -20,11 +20,13 @@ grad = zeros(size(theta));
 % Note: grad should have the same dimensions as theta
 %
 
+% compute J(theta) cost function
+h = sigmoid(X * theta);
+costF = (-y) .* log(h) - (1-y) .* log(1-h);
+J = 1/m * sum(costF);
 
-
-
-
-
+% compute gradient: partial derivatives of J(theta)
+grad = 1/m * X' * (h-y);
 
 
 % =============================================================
