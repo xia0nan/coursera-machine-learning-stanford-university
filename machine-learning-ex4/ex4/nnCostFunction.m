@@ -76,14 +76,20 @@ a2 = [ones(size(a2, 1), 1) a2];
 z3 = a2 * Theta2';
 a3 = sigmoid(z3);
 
-[a_max a_idx] = max(a3, [], 2);
-p = a_idx;
+h = a3;
 
+y_vec = zeros(m, num_labels);
+for i = 1:m
+    for j = 1:num_labels
+        if j == y(i)
+            y_vec(i,j) = 1;
+        end
+    end
+end
+ 
+costF = ((-y_vec) .* log(h) - (1-y_vec) .* log(1-h));
 
-J = 1 / m * ((-y') * log(h) - (1-y') * log(1-h));
-
-
-
+J = 1 / m * sum(sum(costF));
 
 
 
