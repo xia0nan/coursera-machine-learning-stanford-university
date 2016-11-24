@@ -88,17 +88,9 @@ for i = 1:m
 end
  
 costF = ((-y_vec) .* log(h) - (1-y_vec) .* log(1-h));
+regularized = lambda / 2 / m * (sum(sum(Theta1(:, 2:size(Theta1, 2)).^2)) + sum(sum(Theta2(:, 2:size(Theta2, 2)).^2)));
 
-J = 1 / m * sum(sum(costF));
-
-
-
-
-
-
-
-
-
+J = 1 / m * sum(sum(costF)) + regularized;
 
 
 
