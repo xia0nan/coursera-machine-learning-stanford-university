@@ -63,8 +63,7 @@ Theta2_grad = zeros(size(Theta2));
 %
 
 
-% Part 1
-% Add ones to the X data matrix
+% Part 1: Feedforward the neural network and return the cost in the variable J.
 X = [ones(m, 1) X];
 
 a1 = X;
@@ -80,20 +79,22 @@ h = a3;
 
 y_vec = zeros(m, num_labels);
 for i = 1:m
-    for j = 1:num_labels
-        if j == y(i)
-            y_vec(i,j) = 1;
-        end
-    end
+  y_vec(i,y(i)) = 1;
 end
  
 costF = ((-y_vec) .* log(h) - (1-y_vec) .* log(1-h));
-regularized = lambda / 2 / m * (sum(sum(Theta1(:, 2:size(Theta1, 2)).^2)) + sum(sum(Theta2(:, 2:size(Theta2, 2)).^2)));
+regularized = lambda / 2 / m * (sum(sum(Theta1(:, 2:end).^2)) + sum(sum(Theta2(:, 2:end).^2)));
 
 J = 1 / m * sum(sum(costF)) + regularized;
 
+% Part 2: Implement the backpropagation algorithm to compute the gradients
+d3 = a3 - y_vec;
+d2 = d3 * Theta2;
+d2 = d2(:, 2:end);
+d2 = d2.* sigmoidGradient(z2);
 
-
+Theta1_grad = d2' * a1 / m;
+Theta2_grad = d3' * a2 / m;
 
 % -------------------------------------------------------------
 
