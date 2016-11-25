@@ -96,6 +96,10 @@ d2 = d2.* sigmoidGradient(z2);
 Theta1_grad = d2' * a1 / m;
 Theta2_grad = d3' * a2 / m;
 
+% Part 3: Implement regularization with the cost function and gradients.
+Theta1_grad = Theta1_grad + [zeros(size(Theta1, 1), 1) lambda/m*Theta1(:,2:end)];
+Theta2_grad = Theta2_grad + [zeros(size(Theta2, 1), 1) lambda/m*Theta2(:,2:end)];
+
 % -------------------------------------------------------------
 
 % =========================================================================
