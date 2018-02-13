@@ -20,6 +20,9 @@ grad = zeros(size(theta));
 %
 
 
+h = X * theta;
+
+J = 0.5 / m * (h - y)' * (h - y) + (lambda / (2*m)) * sum(power(theta(2:end), 2));
 
 
 
