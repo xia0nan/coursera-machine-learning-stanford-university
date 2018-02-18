@@ -16,6 +16,17 @@ X_poly = zeros(numel(X), p);
 % 
 
 
+% 3 Polynomial regression
+m = size(X,1);
+
+for i = 1:m
+	X_row = zeros(p,1);
+	for q = 1:p
+		X_row(q) = X(i).^q;
+	end
+	X_poly(i, :) = X_row;
+end
+
 
 
 
