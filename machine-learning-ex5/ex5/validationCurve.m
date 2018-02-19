@@ -39,7 +39,12 @@ error_val = zeros(length(lambda_vec), 1);
 %
 %
 
-
+% Part 3.3 Selecting ? using a cross validation set
+for i = 1:length(lambda_vec)
+    theta = trainLinearReg(X, y, lambda_vec(i));
+    error_train(i) = linearRegCostFunction(X, y, theta, 0);
+    error_val(i) = linearRegCostFunction(Xval, yval, theta, 0);
+end
 
 
 
