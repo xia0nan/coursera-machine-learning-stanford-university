@@ -21,8 +21,15 @@ idx = zeros(size(X,1), 1);
 % Note: You can use a for-loop over the examples to compute this.
 %
 
+% 1.1.1 Finding closest centroids
 
+diff_matrix = [];
+for i = 1:size(X,1)
+    diff_col = sum((X(i,:)-centroids).^2, 2);
+    diff_matrix = [diff_matrix diff_col];
+end
 
+[~,idx] = min(diff_matrix);
 
 
 
