@@ -20,6 +20,7 @@ S = zeros(n);
 %       number of examples).
 %
 
+% 2.2 Implementing PCA
 Sigma = 1 / m * (X' * X);
 
 [U, S, V] = svd(Sigma);
