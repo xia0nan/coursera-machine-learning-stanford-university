@@ -27,10 +27,10 @@ centroids = zeros(K, n);
 %
 
 % 1.1.2 Computing centroid means
-samplewithindex = [X idx'];
-[ud,~,ic]=unique( samplewithindex(:,3));  
-indexwithmu = [ud, accumarray(ic,samplewithindex(:,1),[],@mean), accumarray(ic,samplewithindex(:,2),[],@mean)];
-centroids = indexwithmu(:,2:3);
+for i=1:K
+    point = idx==i;
+    centroids(i,:) = mean(X(point,:));
+end
 
 
 
