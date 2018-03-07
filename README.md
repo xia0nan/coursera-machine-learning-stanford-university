@@ -7,7 +7,7 @@ In progress: Now starting Week 9 Recommender Systems
 
 ## Week
 Index | Week | Course | Assignment | Grade 
---- | --- | --- | --- | --- | ---
+--- | --- | --- | --- | --- 
 1 | 1 | Introduction | NA | 100%
 2 | 1 | Linear Regression with One Variable | NA | 100%
 3 | 2 | Linear Regression with Multiple Variables | NA | 100%
