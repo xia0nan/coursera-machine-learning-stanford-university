@@ -3,7 +3,7 @@
 
 Author: Xiao Nan
 
-In progress: Now on Week 9 Recommender Systems
+Course Completed: 100%
 
 ## Week
 Index | Week | Course | Assignment | Grade 
@@ -21,7 +21,7 @@ Index | Week | Course | Assignment | Grade
 11 | 7 | Support Vector Machines | [Programming Assignment 6](https://github.com/xnone/Machine-Learning/tree/master/machine-learning-ex6) | 100%
 12 | 8 | Unsupervised Learning | NA | 100%
 13 | 8 | Dimensionality Reduction | [Programming Assignment 7](https://github.com/xnone/Machine-Learning/tree/master/machine-learning-ex7) | 100%
-14 | 9 | Anomaly Detection | NA | 80%
-15 | 9 | Recommender Systems | [Programming Assignment 8](https://github.com/xnone/Machine-Learning/tree/master/machine-learning-ex8) | 0%
+14 | 9 | Anomaly Detection | NA | 100%
+15 | 9 | Recommender Systems | [Programming Assignment 8](https://github.com/xnone/Machine-Learning/tree/master/machine-learning-ex8) | 100%
 16 | 10 | Large Scale Machine Learning | NA | 100%
 17 | 11 | Application Example: Photo OCR | NA | 100%
