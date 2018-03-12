@@ -3,7 +3,7 @@
 
 Author: Xiao Nan
 
-Course Completed: 100%
+Course Completed: 100% - [Certification](https://www.coursera.org/account/accomplishments/records/EJEMPH8NUXS2)
 
 ## Week
 Index | Week | Course | Programming Assignment | Grade 
