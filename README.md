@@ -6,7 +6,7 @@ Author: Xiao Nan
 Course Completed: 100%
 
 ## Week
-Index | Week | Course | Assignment | Grade 
+Index | Week | Course | Programming Assignment | Grade 
 --- | --- | --- | --- | --- 
 1 | 1 | Introduction | NA | 100%
 2 | 1 | Linear Regression with One Variable | NA | 100%
